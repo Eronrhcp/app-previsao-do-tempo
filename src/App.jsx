@@ -32,8 +32,20 @@ function App() {
          <div className='name'>
             <p>{data.name}</p>
          </div>
-         <div className='temperature'>
+         <div className='temp'>
             <p>{data.main ? <h2>{data.main.temp}</h2> : null}</p>
+         </div>
+         <div className='temp_min'>
+            <p>{data.main ? <h2>{data.main.temp_min}</h2> : null}</p>
+         </div>
+         <div className='temp_max'>
+            <p>{data.main ? <h2>{data.main.temp_max}</h2> : null}</p>
+         </div>
+         <div className='humidity'>
+            <p>{data.main ? <h2>{data.main.humidity}</h2> : null}</p>
+         </div>
+         <div className='pressure'>
+            <p>{data.main ? <h2>{data.main.pressure}</h2> : null}</p>
          </div>
       </div>
    );
