@@ -21,20 +21,19 @@ function App() {
 
   return (
     <section className="h-screen bg-gradient-to-r from-sky-500 to-indigo-500 ">
-      <div className="bg-w py-8 lg:py-16 px-4 mx-auto max-w-screen-md self-center">
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md self-center">
         <div>
           <input
             type="text"
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             onKeyPress={searchLocation}
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-600 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"
             placeholder="Insira sua localização..."
-            required=""
           />
         </div>
         {data.main ? (
-          <div className="bg-slate-100 rounded-md w-3/6 h-64">
+          <div className="bg-slate-100 mx-auto rounded-md w-3/6 h-64">
             <div className="p-2 w-full pt-8 mt-8 text-center flex justify-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +76,7 @@ function App() {
       const hasIcon = data.weather[0].icon == Icons(icon) 
       <img src={Icons(icons)} alt="icon-weather" className=""/>
       */
-  );
+  )
 }
 
 export default App;
