@@ -14,6 +14,8 @@ Este arquivo serve como um guia de anotações, contendo: observações, sugest�
 
 [ ] Adicionar um README ao projeto
 
+[ ] Refatorar o projeto e separar os componentes (continuar o trabanho no componente **Form**)
+
 ---
 
 ### 2 Alterar o layout da aplicação
