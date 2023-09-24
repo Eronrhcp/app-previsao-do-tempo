@@ -15,6 +15,7 @@
     "react-inlinesvg": "^3.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
