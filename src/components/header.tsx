@@ -8,10 +8,10 @@ export function Header() {
         height={32}
         alt='Logo do App de Previsão do Tempo'
       />
-      <h1 className='text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white'>
+      <h1 className='text-3xl font-bold text-gray-800 sm:text-4xl dark:text-neutral-200'>
         Previsão do Tempo
       </h1>
-      <p className='mt-3 text-gray-600 dark:text-neutral-400'>
+      <p className='mt-3 text-sm text-gray-600 dark:text-neutral-200'>
         O aplicativo utiliza a API do <a
           href='https://openweathermap.org/'
           target='_blank'
