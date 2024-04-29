@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Icons from "./components/Icons";
+import { MapPin } from "lucide-react";
+import { Location } from "./components/location";
 
 function App() {
   const [data, setWeather] = useState({});
@@ -21,7 +23,7 @@ function App() {
 
   return (
     <section className="h-screen bg-gradient-to-r from-sky-500 to-indigo-500 ">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md self-center">
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-md self-center">
         <div>
           <input
             type="text"
@@ -33,21 +35,13 @@ function App() {
           />
         </div>
         {data.main ? (
-          <div className="bg-slate-100 mx-auto rounded-md w-3/6 h-64">
-            <div className="p-2 w-full pt-8 mt-8 text-center flex justify-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#000000"
-                viewBox="0 0 256 256"
-              >
-                <path d="M200,224H150.54A266.56,266.56,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25a88,88,0,0,0-176,0c0,31.4,14.51,64.68,42,96.25A266.56,266.56,0,0,0,105.46,224H56a8,8,0,0,0,0,16H200a8,8,0,0,0,0-16ZM56,104a72,72,0,0,1,144,0c0,57.23-55.47,105-72,118C111.47,209,56,161.23,56,104Zm112,0a40,40,0,1,0-40,40A40,40,0,0,0,168,104Zm-64,0a24,24,0,1,1,24,24A24,24,0,0,1,104,104Z"></path>
-              </svg>
+          <div className="bg-slate-100 mx-auto rounded-md max-w-3xl h-64">
+            <div className="p-2 w-full pt-8 mt-8 text-center flex items-center justify-center gap-2">
+              <MapPin />
               <p className="text-slate-800 text-3xl">{data.name}</p>
             </div>
             <div>
-              <div className="leading-normal my-5 text-lg flex items-baseline justify-center">
+              <div className="leading-normal my-5 text-lg flex items-center justify-center">
                 {data.main ? (
                   <p className="text-8xl">
                     {((data.main.temp - 32) / (1, 8)).toFixed(1)}
@@ -72,10 +66,6 @@ function App() {
         )}
       </div>
     </section>
-    /*
-      const hasIcon = data.weather[0].icon == Icons(icon) 
-      <img src={Icons(icons)} alt="icon-weather" className=""/>
-      */
   )
 }
 
