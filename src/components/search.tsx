@@ -2,7 +2,6 @@ import.meta.env.VITE_API_KEY
 
 import { useState } from "react";
 import axios from "axios";
-import { Icons } from "./Icons"
 import { Search, Droplets, Thermometer, ThermometerSnowflake, ThermometerSun, Wind } from "lucide-react"
 import { WeatherInfo } from "./weather-info";
 interface ResponseAPI {
@@ -75,7 +74,7 @@ export function SearchField() {
 			</div>
 
 			{data?.main ? (
-				<section className="max-w-2xl text-center mx-auto mt-6 rounded-lg bg-neutral-100 text-gray-800 flex flex-col items-center justify-center">
+				<section className="max-w-2xl text-center mx-auto mt-6 rounded-lg bg-zinc-300 text-gray-800 flex flex-col items-center justify-center">
 					<p className='text-center text-2xl font-bold pt-7'>
 						{data?.name}
 					</p>
@@ -86,7 +85,7 @@ export function SearchField() {
 									{(data.main.temp).toFixed(0)}ºC
 								</p>
 							) : null}
-							{<img src={Icons(data?.weather.icon)} className="w-20 h-20" />}
+							{<img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} className="w-20 h-20" />}
 							<p className="text-xs">
 								{data?.main ? (
 									<span>{data?.weather[0].description}</span>
