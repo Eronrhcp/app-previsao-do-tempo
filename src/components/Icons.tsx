@@ -72,5 +72,41 @@ export const Icons = (icon: string) => {
     default:
       icon = overcastNight
   }
-  return icon
+
+  // switch (icon) {
+  //   case '01d':
+  //     return 'clearDay';
+  //   case '01n':
+  //     return 'clearNight';
+  //   case '02d':
+  //     return 'partlyCloudyDay';
+  //   case '02n':
+  //     return 'partlyCloudyNight';
+  //   case '03d':
+  //   case '03n':
+  //     return 'cloudy';
+  //   case '04d':
+  //     return 'overcastDay';
+  //   case '04n':
+  //     return 'overcastNight';
+  //   case '09d':
+  //     return 'partlyCloudyDayRain';
+  //   case '09n':
+  //     return 'partlyCloudyNightRain';
+  //   case '10d':
+  //   case '10n':
+  //     return 'rain';
+  //   case '11d':
+  //     return 'thunderstormsDay';
+  //   case '11n':
+  //     return 'thunderstormsNight';
+  //   case '13d':
+  //   case '13n':
+  //     return 'smoke';
+  //   case '50d':
+  //   case '50n':
+  //     return 'snow';
+  //   default:
+  //     return 'overcastNight';
+  // }
 }
